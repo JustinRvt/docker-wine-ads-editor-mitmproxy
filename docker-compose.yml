@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  ads-editor:
+    build:
+      context: .
+    image: google-ads-editor
+    environment:
+      - DISPLAY=:1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./data:/home/dockeruser/.ads-data
+    depends_on:
+      - proxy
+    networks:
+      - adsnet
+
+  proxy:
+    image: mitmproxy/mitmproxy
+    command: mitmweb --mode transparent --showhost
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./certs:/home/mitmproxy/.mitmproxy
+    networks:
+      - adsnet
+
+networks:
+  adsnet:

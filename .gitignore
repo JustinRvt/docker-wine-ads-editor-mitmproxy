@@ -1,0 +1,14 @@
+# Ignore tous les fichiers de persistance Wine / Ads Editor
+data/*
+!data/.gitkeep
+
+# Cache Wine
+data/.wine/
+data/*.tmp
+data/*.log
+data/*.lock
+
+# Temp Google Ads Editor
+data/AppData/
+data/Local Settings/
+data/Temp/
