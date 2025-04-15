@@ -2,7 +2,10 @@
 
 > *"Parce qu’il ne savait pas que c’était impossible, il commit."*
 
----
+![Built in agony](https://img.shields.io/badge/Built%20in-agony-red)
+![Not guaranteed to work](https://img.shields.io/badge/100%25-breakage-black)
+![CI: Crying Internally](https://img.shields.io/badge/CI-Crying_Internally-blue)
+
 
 ## Projet mort-né, mais immortel
 
@@ -59,3 +62,6 @@ Tu peux essayer :
 
 ```bash
 make go
+
+
+
