@@ -1,14 +1,62 @@
-# Ignore tous les fichiers de persistance Wine / Ads Editor
-data/*
+# -------------------------------------
+# Dossier de persistance (Ads Editor/Wine)
+data/
 !data/.gitkeep
 
-# Cache Wine
-data/.wine/
-data/*.tmp
-data/*.log
-data/*.lock
+# -------------------------------------
+# Wine prefix & ses vomissures
+*.tmp
+*.log
+*.lock
+*.ldb
+*.bak
+*.msi
+*.cab
+*.cah
+*.old
+*.~*
+*.swp
 
-# Temp Google Ads Editor
-data/AppData/
-data/Local Settings/
-data/Temp/
+# Wine runtime temp files
+*.lnk
+*.desktop
+Thumbs.db
+ehthumbs.db
+Icon?
+.DS_Store
+
+# -------------------------------------
+# mitmproxy certs & clés privées
+certs/*.p12
+certs/*.key
+certs/*.pem
+certs/*.der
+certs/*.crt
+
+# Eviter de pousser un certificat mitmproxy avec la clé privée
+!certs/mitmproxy-ca-cert.pem
+
+# -------------------------------------
+# Docker-related
+*.pid
+docker-compose.override.yml
+.env
+.env.*
+
+# -------------------------------------
+# Vscode / IDE trucs
+.vscode/
+.idea/
+*.code-workspace
+
+# -------------------------------------
+# Archives de debug
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# -------------------------------------
+# Tu sais jamais...
+__pycache__/
+*.pyc
