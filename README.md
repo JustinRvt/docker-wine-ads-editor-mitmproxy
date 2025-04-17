@@ -1,3 +1,75 @@
+(French below)
+
+# Google Ads Editor under Wine + Docker + mitmproxy
+
+> *"Because he didn’t know it was impossible, he committed anyway."*
+
+![Built in agony](https://img.shields.io/badge/Built%20in-agony-red)
+![Not guaranteed to work](https://img.shields.io/badge/100%25-breakage-black)
+![CI: Crying Internally](https://img.shields.io/badge/CI-Crying_Internally-blue)
+
+---
+
+## Stillborn project, yet undead
+
+This repository is a **desperate, improbable and needlessly convoluted** attempt to run **Google Ads Editor** (a Windows .NET app) inside a Docker container, via **Wine**, with **mitmproxy** slapped in between to intercept network traffic.
+
+It’s like a cursed crossover between DevOps, exorcism, and system-level despair.
+
+---
+
+## The Unholy Tech Stack
+
+- Debian 12 (`bookworm`)
+- Wine 8.x (WOW64)
+- Winetricks (with dotnet48, vcrun2015, corefonts, etc.)
+- Xvfb (because you don’t get a GUI in Docker, genius)
+- mitmproxy (to capture the app's screams)
+- Google Ads Editor (yes, the nightmare itself)
+- Docker + docker-compose (obviously)
+
+---
+
+## Initial goal
+
+- Capture the requests sent by Google Ads Editor
+- Check if behavior changes depending on IP, account, or general vibes
+- Maintain a shred of dignity
+
+---
+
+## 💣 What went horribly wrong
+
+- `certmgr.msc` doesn’t exist in Wine. Surprise.
+- .NET 4.8 silently explodes every other install.
+- `ShellExecuteEx` throws a `File not found` straight to your face.
+- `0x80000003`, aka: **“I dropped a breakpoint just to spite you.”**
+- `ntlm_auth` is MIA despite `winbind` being present.
+- Logs slowly morph into cryptic haikus of pain.
+- Konsole crashed while rendering glyphs in an unknown language.
+
+---
+
+## Conclusion
+
+Don’t do this.
+Or do it — but **wear a helmet and tell someone you love them**.
+
+This repository stands as a **technical shipwreck log**, so others may know what *not* to attempt, and to remind us all that, in the end,
+**the real enemy was yourself.**
+
+---
+
+## Wanna try it anyway?
+
+You can attempt this ritual like so:
+
+```bash
+make go
+
+
+-------------------------------------------------------------------------------------------
+
 # Google Ads Editor sous Wine + Docker + mitmproxy
 
 > *"Parce qu’il ne savait pas que c’était impossible, il commit."*
