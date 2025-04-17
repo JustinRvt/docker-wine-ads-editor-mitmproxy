@@ -1,4 +1,5 @@
-(French below)
+[🇫🇷 French version](#google-ads-editor-sous-wine--docker--mitmproxy)
+
 
 # Google Ads Editor under Wine + Docker + mitmproxy
 
