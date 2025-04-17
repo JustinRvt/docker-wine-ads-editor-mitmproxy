@@ -68,7 +68,7 @@ You can attempt this ritual like so:
 make go
 
 
--------------------------------------------------------------------------------------------
+
 
 # Google Ads Editor sous Wine + Docker + mitmproxy
 
