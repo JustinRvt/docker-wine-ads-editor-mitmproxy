@@ -67,7 +67,7 @@ You can attempt this ritual like so:
 ```bash
 make go
 
-
+```
 
 
 # Google Ads Editor sous Wine + Docker + mitmproxy
